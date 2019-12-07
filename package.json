@@ -1,0 +1,15 @@
+{
+  "name": "list",
+  "version": "1.0.0",
+  "description": "A simple list for keeping track oof things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "CaptainLazarus",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.1"
+  }
+}
