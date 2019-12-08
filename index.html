@@ -5,14 +5,17 @@
     <title>Hello World!</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-  </head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="index.js"></script>
+    </head>
   <body>
     <div id="header">
-        <div class="category">Study</div>
-        <div class="category">Games</div>
-        <div class="category">Movies</div>
-        <div class="category">Books</div>
-        <div class="category">Anime</div>
+        <button class="add">+</button>
+        <button class="category" id="study" onClick="getDatabase(this.id)">Study</button>
+        <button class="category" id="games" onClick="getDatabase(this.id)">Games</button>
+        <button class="category" id="movies" onClick="getDatabase(this.id)">Movies</button>
+        <button class="category" id="anime" onClick="getDatabase(this.id)">Anime</button>
+        <button class="category" id="books" onClick="getDatabase(this.id)">Books</button>
     </div>
     <div id="mainBody">
 

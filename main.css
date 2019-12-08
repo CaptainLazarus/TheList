@@ -1,0 +1,27 @@
+#header {
+    background-color: grey;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    background-color: aqua;
+    border-color: black;
+    text-align: center;
+    border: 1px;
+}
+
+.add{
+    flex: 1;
+    padding: 10px;
+    border: 1px;
+    border-style: solid;
+}
+
+.category{
+    flex: 1;
+    padding: 10px;
+    border-style: solid;        
+}
