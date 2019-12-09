@@ -1,9 +1,21 @@
+body {
+    background-color: lightcyan;
+}
+
 #header {
     background-color: grey;
     padding: 20px;
     
     display: flex;
     flex-direction: row;
+}
+
+#mainBody{
+    background-color: lightcyan;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
 }
 
 button{
@@ -24,4 +36,12 @@ button{
     flex: 1;
     padding: 10px;
     border-style: solid;        
+}
+
+p {
+    background-color: aqua;
+    max-width: 100px;
+    border: 1px;
+    border-color: black;
+    border-style: dashed;
 }
