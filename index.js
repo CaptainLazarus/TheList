@@ -8,6 +8,20 @@ function addWindow(){
     location.assign("add.html");
 }
 
+function deleteItem(e){
+    fs.readFile(__dirname + "/data.json" , function removeData(err , data) {
+        if(err) throw err;
+        x = JSON.parse(data);
+        var type = e.getAttribute("category");
+        x[type] = x[type].filter(i => i != e.innerText);
+        fs.writeFileSync(__dirname + '/data.json' ,  JSON.stringify(x));
+        e.remove();
+    });
+
+
+}
+
+
 function addToList() {
     var x , type;
     var radioGroup = document.getElementsByName("category");
@@ -35,23 +49,25 @@ function addToList() {
     });
 }
 
-function createList(list){
-    
+function createList(list ,  id){
     var body = document.getElementById("mainBody");
     var item=0;
     while (body.childElementCount){
         body.removeChild(body.childNodes[item]);    
     }
-
     for (item in list){
         var listEl = document.createElement("div");
-        var para = document.createElement("p");
-        var button = document.createElement("button");
-        //var text = document.;
+        var butt = document.createElement("button");
+        // var buttonClass = document.createAttribute("class");
+        // var onclick = document.createAttribute("onclick");
+        
+        butt.setAttribute("category" , id);
+        butt.setAttribute("class" , "item");
+        butt.setAttribute("onclick" , "deleteItem(this)");
+
         var text = document.createTextNode(list[item]);
-        para.appendChild(text);
-        listEl.appendChild(para);
-        listEl.appendChild(button);
+        butt.appendChild(text);
+        listEl.appendChild(butt);
         var div = document.getElementById("mainBody");
         div.appendChild(listEl);
     }
@@ -64,14 +80,14 @@ function getDatabase(id) {
         } 
         var x = JSON.parse(data);
         x = x[id];
-        createList(x);
+        createList(x , id);
     });
 }
 
 function createWindow () {
     let win = new BrowserWindow({
-        width: 1200,
-        height: 1200,
+        width: 800,
+        height: 600,
         frame: false,
         webPreferences: {
             nodeIntegration: true

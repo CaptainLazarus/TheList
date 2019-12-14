@@ -1,47 +1,110 @@
+@keyframes widthInc{
+0%      {max-width: auto;}
+
+100%    {max-width: 100px;}
+}
+
 body {
-    background-color: lightcyan;
+    background-color: #817c7c;
+    border-width: 50px;
+    margin-top: 50px;
+}
+button:focus{
+    outline: none;
+}
+
+button:active{
+    transform: translate(3px,3px);
 }
 
 #header {
-    background-color: grey;
-    padding: 20px;
-    
+    background-color: #817c7c;
     display: flex;
     flex-direction: row;
 }
 
 #mainBody{
-    background-color: lightcyan;
+    background-color: #817c7c;
     padding: 20px;
     
     display: flex;
     flex-direction: column;
 }
 
-button{
-    background-color: aqua;
-    border-color: black;
-    text-align: center;
-    border: 1px;
-}
-
 .add{
-    flex: 1;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     border: 1px;
     border-style: solid;
+    border-radius: 25px;
+    background-color: #817c7c;
+    text-align: center;
+    border-color: #22313f;
+    border-width: 3px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 5;
+    padding: 10px;
+    border-style: solid;
+    box-shadow: 3px 3px #22313f;
+}
+
+.add:hover{
+    cursor: cell;
 }
 
 .category{
+    margin: 5px;
+    background-color: #817c7c;
+    text-align: center;
+    border-color: #22313f;
+    border-width: 3px;
     flex: 1;
     padding: 10px;
-    border-style: solid;        
+    border-style: solid;
+    color: #00ffff;
+    box-shadow: 3px 3px #22313f;
 }
 
-p {
-    background-color: aqua;
-    max-width: 100px;
-    border: 1px;
-    border-color: black;
-    border-style: dashed;
+.category:hover{
+    cursor: auto;
+}
+
+button:active{
+    box-shadow: none;
+}
+
+.item{
+    width: 100px;
+    margin: 5px;
+    background-color: #817c7c;
+    text-align: center;
+    border-color: #22313f;
+    border-width: 3px;
+    flex: 1;
+    padding: 10px;
+    border-style: solid;
+    color: #00ffff;
+    box-shadow: 3px 3px #22313f;
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.item:hover{
+    width: 300px;
+    cursor: cell;
+    /* animation-name: widthInc;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards; */
+    background-color: #c0392b;
+}
+
+#tf {
+    width: 100px;
+    position: relative;
+
 }
