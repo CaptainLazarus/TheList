@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #817c7c;
+    background-color: #1c2833;
     border-width: 50px;
     margin-top: 50px;
 }
@@ -18,13 +18,13 @@ button:active{
 }
 
 #header {
-    background-color: #817c7c;
+    background-color: #1c2833;
     display: flex;
     flex-direction: row;
 }
 
 #mainBody{
-    background-color: #817c7c;
+    background-color: #1c2833;
     padding: 20px;
     
     display: flex;
@@ -39,9 +39,9 @@ button:active{
     border: 1px;
     border-style: solid;
     border-radius: 25px;
-    background-color: #817c7c;
+    background-color: #1c2833;
     text-align: center;
-    border-color: #22313f;
+    border-color: #00FF41;
     border-width: 3px;
     position: fixed;
     bottom: 50px;
@@ -49,7 +49,8 @@ button:active{
     z-index: 5;
     padding: 10px;
     border-style: solid;
-    box-shadow: 3px 3px #22313f;
+    box-shadow: 3px 3px #008F11;
+    color: #00ffff;
 }
 
 .add:hover{
@@ -58,15 +59,15 @@ button:active{
 
 .category{
     margin: 5px;
-    background-color: #817c7c;
+    background-color: #1c2833;
     text-align: center;
-    border-color: #22313f;
+    border-color: #00FF41;
     border-width: 3px;
     flex: 1;
     padding: 10px;
     border-style: solid;
     color: #00ffff;
-    box-shadow: 3px 3px #22313f;
+    box-shadow: 3px 3px #008F11;
 }
 
 .category:hover{
@@ -80,9 +81,9 @@ button:active{
 .item{
     width: 100px;
     margin: 5px;
-    background-color: #817c7c;
+    background-color: #1c2833;
     text-align: center;
-    border-color: #22313f;
+    border-color: #008F11;
     border-width: 3px;
     flex: 1;
     padding: 10px;
@@ -104,7 +105,27 @@ button:active{
 }
 
 #tf {
-    width: 100px;
-    position: relative;
+    width: 400px;
+    height: 40px;
+    position: absolute;
+    left: 200px;
+    top: 280px;
+    height: 40px;
+    background-color: #1c2833;
+    color: #00ffff;
+    font-family: 'Times New Roman', Times, serif;
+    border-color: #00FF41;
+}
 
+#submit {
+    margin: 5px;
+    background-color: #1c2833;
+    text-align: center;
+    border-color: #00FF41;
+    border-width: 3px;
+    flex: 1;
+    padding: 10px;
+    border-style: solid;
+    color: #00ffff;
+    box-shadow: 3px 3px #008F11;
 }
