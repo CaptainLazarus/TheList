@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: 'Times New Roman', Times, serif;
     background-color: #1c2833;
     border-width: 50px;
     margin-top: 50px;
@@ -79,11 +80,13 @@ button:active{
 }
 
 .item{
-    width: 100px;
+    width: 150px;
+    font-size: 16px;
+    height: auto;
     margin: 5px;
     background-color: #1c2833;
     text-align: center;
-    border-color: #008F11;
+    border-color: #00FF41;
     border-width: 3px;
     flex: 1;
     padding: 10px;
@@ -91,7 +94,7 @@ button:active{
     color: #00ffff;
     box-shadow: 3px 3px #22313f;
     transition-property: width;
-    transition-duration: 1s;
+    transition-duration: 500ms;
 }
 
 .item:hover{
@@ -109,15 +112,19 @@ button:active{
     height: 40px;
     position: absolute;
     left: 200px;
-    top: 280px;
+    top: 200px;
     height: 40px;
+
+    padding: 5px;
     background-color: #1c2833;
     color: #00ffff;
     font-family: 'Times New Roman', Times, serif;
     border-color: #00FF41;
+    font-size: 20px;
 }
 
 #submit {
+    padding: 5px;
     margin: 5px;
     background-color: #1c2833;
     text-align: center;
@@ -128,4 +135,52 @@ button:active{
     border-style: solid;
     color: #00ffff;
     box-shadow: 3px 3px #008F11;
+    
+    position: absolute;
+    height: 50px;
+    width: 400px;
+    left: 200px;
+    top: 400px;
+}
+
+.radio-toolbar {
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    left: 200px;
+    top: 300px;
+    display: flex;
+    padding: 5px;
+}
+
+.radio-toolbar input[type="radio"] {
+    display: none;
+}
+
+.radio-toolbar label {
+    /* margin: 2px;
+    color: #00FF41;
+    flex: 1;
+    background-color: #1c2833;
+    border: 3px;
+    border-color: #00FF41;
+    border-style: solid;
+    border-width: 3px;
+    padding: 4px 11px;
+    font-size: 16px; */
+    margin: 5px;
+    background-color: #1c2833;
+    text-align: center;
+    border-color: #00FF41;
+    border-width: 3px;
+    flex: 1;
+    padding: 10px;
+    border-style: solid;
+    color: #00ffff;
+    box-shadow: 3px 3px #008F11;
+}
+.radio-toolbar input[type="radio"]:checked+label {
+    background-color: black;
+    transform: translate(3px,3px);
+    box-shadow: none;
 }
