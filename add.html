@@ -11,6 +11,8 @@
 <body>
     <input type="text" class="textfield" id = "tf">
     
+    <button id="goBack" onclick="goBack()"><<</button>
+
     <div class="radio-toolbar">
         <input type="radio" name="category" value="study" class="radiobutton" id="study">
         <label for="study">Study</label>
@@ -26,6 +28,9 @@
         
         <input id="movies" type="radio" name="category" value="movies" class="radiobutton">
         <label for="movies">Movies</label>
+
+        <input id="tvshows" type="radio" name="category" value="tvshows" class="radiobutton">
+        <label for="tvshows">TV</label>
     </div>
 
     <button id="submit" onclick="addToList()">Add</button>

@@ -1,11 +1,15 @@
 const electron = require('electron');
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow , globalShortcut} = require('electron');
 const fs = require('fs');
 
 var list;
 
 function addWindow(){
     location.assign("add.html");
+}
+
+function goBack(){
+    location.assign("index.html");
 }
 
 function deleteItem(e){
@@ -84,17 +88,26 @@ function getDatabase(id) {
     });
 }
 
-function createWindow () {
+
+
+function createWindow (register) {
     let win = new BrowserWindow({
         width: 800,
         height: 600,
-        frame: false,
+        // frame: false,
         webPreferences: {
             nodeIntegration: true
         }
     })
-
     win.loadFile("index.html");
+    globalShortcut.register('Right', ()=>{
+        win.loadFile("add.html");
+    }
+    )
+    globalShortcut.register('Left', ()=>{
+        win.loadFile("index.html");
+    })
 }
+
 
 app.on('ready' , createWindow);

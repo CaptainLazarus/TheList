@@ -1,11 +1,12 @@
-@keyframes widthInc{
+/* @keyframes widthInc{
 0%      {max-width: auto;}
 
 100%    {max-width: 100px;}
-}
+} */
 
 body {
     font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
     background-color: #1c2833;
     border-width: 50px;
     margin-top: 50px;
@@ -36,7 +37,6 @@ button:active{
     margin: 5px;
     width: 50px;
     height: 50px;
-    padding: 10px;
     border: 1px;
     border-style: solid;
     border-radius: 25px;
@@ -50,12 +50,43 @@ button:active{
     z-index: 5;
     padding: 10px;
     border-style: solid;
-    box-shadow: 3px 3px #008F11;
     color: #00ffff;
+    font-weight: bolder;
+    transition-property: all;
+    transition-duration: 400ms;
 }
 
 .add:hover{
     cursor: cell;
+    border-color: red;
+}
+
+#goBack{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: #1c2833;
+    text-align: center;
+    border-color: #00FF41;
+    border-width: 3px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 5;
+    padding: 10px;
+    border-style: solid;
+    color: #00ffff;
+    font-weight: bolder;
+    transition-property: all;
+    transition-duration: 400ms;
+}
+
+#goBack:hover{
+    cursor: cell;
+    border-color: red;
 }
 
 .category{
@@ -68,7 +99,8 @@ button:active{
     padding: 10px;
     border-style: solid;
     color: #00ffff;
-    box-shadow: 3px 3px #008F11;
+    box-shadow: 5px 5px #008F11;
+    font-weight: bolder;
 }
 
 .category:hover{
@@ -80,9 +112,9 @@ button:active{
 }
 
 .item{
+    min-width: 50px;
     width: 150px;
-    font-size: 16px;
-    height: auto;
+    height: 80px;
     margin: 5px;
     background-color: #1c2833;
     text-align: center;
@@ -93,18 +125,21 @@ button:active{
     border-style: solid;
     color: #00ffff;
     box-shadow: 3px 3px #22313f;
-    transition-property: width;
+    transition-property: all;
     transition-duration: 500ms;
+    font-weight: bolder;
 }
 
 .item:hover{
     width: 300px;
+    height: 100px;
+    border-color: red;
+    /* height: fit-content; */
     cursor: cell;
     /* animation-name: widthInc;
     animation-duration: 1s;
     animation-direction: alternate;
     animation-fill-mode: forwards; */
-    background-color: #c0392b;
 }
 
 #tf {
@@ -121,6 +156,7 @@ button:active{
     font-family: 'Times New Roman', Times, serif;
     border-color: #00FF41;
     font-size: 20px;
+    font-weight: bolder;
 }
 
 #submit {
@@ -135,6 +171,7 @@ button:active{
     border-style: solid;
     color: #00ffff;
     box-shadow: 3px 3px #008F11;
+    font-weight: bolder;
     
     position: absolute;
     height: 50px;
@@ -145,9 +182,9 @@ button:active{
 
 .radio-toolbar {
     height: 50px;
-    width: 400px;
+    width: 500px;
     position: absolute;
-    left: 200px;
+    left: 150px;
     top: 300px;
     display: flex;
     padding: 5px;
@@ -168,7 +205,7 @@ button:active{
     border-width: 3px;
     padding: 4px 11px;
     font-size: 16px; */
-    margin: 5px;
+    margin: 3px;
     background-color: #1c2833;
     text-align: center;
     border-color: #00FF41;
@@ -178,6 +215,7 @@ button:active{
     border-style: solid;
     color: #00ffff;
     box-shadow: 3px 3px #008F11;
+    font-weight: bolder;
 }
 .radio-toolbar input[type="radio"]:checked+label {
     background-color: black;

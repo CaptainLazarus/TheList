@@ -1,7 +1,7 @@
 {
-  "name": "list",
+  "name": "dalist",
   "version": "1.0.0",
-  "description": "A simple list for keeping track oof things",
+  "description": "A simple list for keeping track of things",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +10,11 @@
   "author": "CaptainLazarus",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^7.1.1"
+    "electron": "^7.1.1",
+    "electron-packager": "^14.1.1"
   },
   "dependencies": {
-    "asar": "^2.0.3"
+    "asar": "^2.0.3",
+    "electron-store": "^5.1.0"
   }
 }
